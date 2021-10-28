@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import TeleHealth from './app/App';
+import './sass/tele-health.scss';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TeleHealth />
   </React.StrictMode>,
   document.getElementById('root')
 );
