@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Stack } from 'react-bootstrap';
 
 //Components
 import DoctorInfo from './../elements/common/DoctorInfo';
@@ -14,17 +14,19 @@ const Dashboard = () => {
 		<>
 			<div className="th--dashboard--page">
 				<DoctorInfo/>
+				
 				<Row className="mb-4">
-					<Col lg="4">
+					<Col md="4">
 						<Summary/>
 					</Col>
-					<Col lg="4">
+					<Col md="4">
 						<Earnings/>
 					</Col>
-					<Col lg="4">
+					<Col md="4">
 						<Calendar/>
 					</Col>
 				</Row>
+				
 				<Row className="mb-4">
 					<Col md="8">
 						<TodayAppointment/>
@@ -33,6 +35,7 @@ const Dashboard = () => {
 						<Requests/>
 					</Col>
 				</Row>
+				
 			</div>
 		</>
 	);

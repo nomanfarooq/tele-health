@@ -34,9 +34,13 @@
 			.nav {
 				.nav-item {
 					text-align: center;
-
 					.nav-link {
 						padding: 1rem;
+						color: $color-primary-beta;
+
+						&:hover {
+							opacity: 1;
+						}
 
 						.th--sidemenu--icon {
 							svg {
@@ -46,6 +50,7 @@
 					}
 
 					.nav-active {
+						color: $color-primary;
 						.th--sidemenu--icon {
 							svg {
 								filter: opacity(1);

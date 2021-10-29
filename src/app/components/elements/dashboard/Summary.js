@@ -7,33 +7,33 @@ const Summary = () => {
 			<Card className="th--card--primary">
 				<Card.Body>
 					<h6>Summary</h6>
-					<Row>
+					<Row className="th--badges-summary">
 						<Col md="6">
 							<p>Attended</p>
 							<div className="th--badge--green">
 								<span className="th--badge--border"/>
-								<span className="th--badge--bg">23</span>
+								<span className="th--badge--bg">02</span>
 							</div>
 						</Col>
 						<Col md="6">
-							<span>Appointment</span>
+							<p>Appointment</p>
 							<div className="th--badge--primary">
 								<span className="th--badge--border"/>
-								<span className="th--badge--bg">23</span>
+								<span className="th--badge--bg">08</span>
 							</div>
 						</Col>
 						<Col md="6">
-							<span>Request</span>
+							<p>Request</p>
 							<div className="th--badge--secondary">
 								<span className="th--badge--border"/>
-								<span className="th--badge--bg">23</span>
+								<span className="th--badge--bg">10</span>
 							</div>
 						</Col>
 						<Col md="6">
-							<span>Canceled</span>
+							<p>Canceled</p>
 							<div className="th--badge--orange">
 								<span className="th--badge--border"/>
-								<span className="th--badge--bg">23</span>
+								<span className="th--badge--bg">05</span>
 							</div>
 						</Col>
 					</Row>
