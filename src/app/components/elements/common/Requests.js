@@ -17,7 +17,7 @@ const Requests = () => {
 			<Card className="th--card--primary">
 				<Card.Body>
 					<div className="d-flex flex-nowrap align-items-center">
-						<h6>Requests</h6>
+						<h5>Requests</h5>
 						<div className="ms-auto text-center">
 							<p className="mb-0">5</p>
 							<a href="#"><small>View all</small></a>

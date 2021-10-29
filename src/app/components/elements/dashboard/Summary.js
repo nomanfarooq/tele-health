@@ -6,7 +6,7 @@ const Summary = () => {
 		<>
 			<Card className="th--card--primary">
 				<Card.Body>
-					<h6>Summary</h6>
+					<h5>Summary</h5>
 					<Row className="th--badges-summary">
 						<Col md="6">
 							<p>Attended</p>

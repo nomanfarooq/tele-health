@@ -5,7 +5,7 @@ import { Row, Col, Stack } from 'react-bootstrap';
 import DoctorInfo from './../elements/common/DoctorInfo';
 import Summary from './../elements/dashboard/Summary';
 import TodayAppointment from './../elements/dashboard/TodayAppointment';
-import Requests from './../elements/dashboard/Requests';
+import Requests from './../elements/common/Requests';
 import Earnings from './../elements/dashboard/Earnings';
 import Calendar from './../elements/dashboard/Calendar';
 

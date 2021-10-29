@@ -6,7 +6,7 @@ const TodayAppointment = () => {
 		<>
 			<Card className="th--card--primary">
 				<Card.Body>
-					<h6 className="mb-3">Today's Appointments 5</h6>
+					<h5 className="mb-3">Today's Appointments 5</h5>
 					<Table>
 						<tbody>
 						<tr className="bg-lightest-primary">

@@ -1,16 +1,16 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
 
-const Calendar = () => {
+const Schedule = () => {
 	return (
 		<>
 			<Card className="th--card--primary">
 				<Card.Body>
-					<h5>Calender</h5>
+					<h5>Scheduler</h5>
 				</Card.Body>
 			</Card>
 		</>
 	);
 };
 
-export default Calendar;
+export default Schedule;
