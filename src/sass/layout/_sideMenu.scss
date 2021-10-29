@@ -1,0 +1,53 @@
+.th--side--menu {
+	z-index: 0;
+	position: absolute;
+	height: 100%;
+
+	&.sidebar-dark {
+		background-color: $color-white;
+	}
+
+	.sidebar {
+		top: 0;
+		bottom: 0;
+		width: 4rem;
+		z-index: 1040;
+		flex: 0 0 auto;
+		position: static;
+		box-sizing: content-box;
+		transition: all ease-in-out .15s;
+
+		&.sidebar-main {
+
+		}
+
+		.sidebar-content {
+			position: static;
+			overflow: visible;
+			width: auto;
+			top: 3.12503rem;
+			bottom: 0;
+
+			.nav {
+				.nav-item {
+					text-align: center;
+
+					.nav-link {
+						padding: 1rem;
+
+						&.nav-active {
+							background-color: $background-light-1;
+							border-bottom-left-radius: 30px;
+							border-top-left-radius: 30px;
+
+							svg > path {
+								filter: grayscale(1) brightness(0);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

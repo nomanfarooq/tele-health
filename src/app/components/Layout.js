@@ -9,16 +9,13 @@ import { Container } from 'react-bootstrap';
 import Topbar from './../components/layout/Topbar';
 import SideMenu from './../components/layout/SideMenu';
 import Dashboard from './../components/pages/Dashboard';
-import ThankyouTech from './../components/pages/ThankyouTech';
-import OrderHistory from './../components/pages/OrderHistory';
-import ActiveOrders from './../components/pages/ActiveOrders';
-import Payments from './../components/pages/Payments';
-import PersonalDetails from './../components/pages/PersonalDetails';
-import Services from './../components/pages/Services';
+import Scheduler from './../components/pages/Scheduler';
+import Patients from './../components/pages/Patients';
 
 // Hooks
 import useAppStore from './../hooks/use-app-store';
-// Hooks
+
+// Pages
 import * as Page from './../store/utils/page';
 
 /** Layout functional component */
@@ -26,20 +23,15 @@ function Layout () {
 	const [{page}] = useAppStore();
 	
 	return (
-		<div className="mrmh-technician-dashboard">
-			<Topbar/>
-			<div className="mrmh-page-content">
-				{/*Need to uncomment TODO://*/}
-				{/*<SideMenu/>*/}
+		<div className="th--dashboard">
+			<div className="th--page--content">
+				<SideMenu/>
 				<Container>
-					<div className="mrmh-content-wrapper">
-						{page === Page.PAGE_THANK_YOU && <ThankyouTech/>}
+					<Topbar/>
+					<div className="th--content--wrapper">
 						{page === Page.PAGE_DASHBOARD && <Dashboard/>}
-						{page === Page.PAGE_ORDER_HISTORY && <OrderHistory/>}
-						{page === Page.PAGE_ACTIVE_ORDERS && <ActiveOrders/>}
-						{page === Page.PAGE_PAYMENT && <Payments/>}
-						{page === Page.PAGE_PERSONAL_DETAILS && <PersonalDetails/>}
-						{page === Page.PAGE_SERVICES && <Services/>}
+						{page === Page.PAGE_SCHEDULER && <Scheduler/>}
+						{page === Page.PAGE_PATIENTS && <Patients/>}
 					</div>
 				</Container>
 			</div>

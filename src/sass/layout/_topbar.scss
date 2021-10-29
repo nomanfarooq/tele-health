@@ -1,0 +1,77 @@
+.th--topbar {
+	position: relative;
+	z-index: 1;
+	border-bottom: 0.5px solid $background-light-2;
+
+	&.light {
+		background-color: $color-white;
+	}
+
+	&.dark {
+		background-color: $color-black;
+	}
+
+	.navbar {
+		padding: 0;
+
+		.navbar-nav {
+			.th--profile {
+				position: relative;
+				width: 30px;
+				height: 30px;
+				overflow: hidden;
+				border-radius: 50%;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.nav-link {
+				margin-right: 1rem;
+				padding: 0 0.75rem;
+
+				&.th--notify {
+					border-left: 0.5px solid $background-light-2;
+					border-right: 0.5px solid $background-light-2;
+
+					.badge {
+						padding: 0.5em;
+						font-weight: 400;
+						margin-left: -10px;
+						border-radius: 1rem;
+						background-color: $background-light-1;
+						color: $background-light-2;
+						position: absolute;
+						margin-top: -5px;
+						line-height: .5;
+						font-size: 70%;
+					}
+				}
+
+				&:hover {
+					color: $color-primary;
+				}
+
+				&.active {
+					color: $color-primary;
+				}
+			}
+
+			.nav-item, .input-group {
+				.dropdown-menu {
+					&.show {
+						margin-top: 20px !important;
+					}
+
+					.dropdown-item {
+						&.active, &:active {
+							background-color: $color-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}

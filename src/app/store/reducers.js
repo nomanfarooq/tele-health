@@ -2,6 +2,8 @@
  * @author Noman Farooq <nomanfarooq@gmail.com>
  */
 
+import React, { createContext } from 'react';
+
 import {
 	APP_INIT, APP_LOADING, APP_ERROR, SET_PAGE
 	

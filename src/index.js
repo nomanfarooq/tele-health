@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TeleHealth from './app/App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './sass/tele-health.scss';
 import reportWebVitals from './reportWebVitals';
 
