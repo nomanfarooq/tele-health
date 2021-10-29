@@ -2,6 +2,7 @@
 	position: relative;
 	z-index: 1;
 	border-bottom: 0.5px solid $background-light-2;
+	height: 60px;
 
 	&.light {
 		background-color: $color-white;

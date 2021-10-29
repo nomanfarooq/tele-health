@@ -5,3 +5,122 @@
 .color-black {
 	color: $color-black;
 }
+
+.color-primary {
+	color: $color-primary;
+}
+
+.color-secondary-light {
+	color: $color-light-green;
+}
+
+.color-secondary-bg-light {
+	background-color: $color-light-green;
+}
+
+.bg-color-primary {
+	background-color: $color-primary;
+}
+
+.bg-color-primary-alpha {
+	background-color: $color-primary-alpha;
+}
+
+/*Cards*/
+.th--card--primary {
+	box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+	border: none;
+	border-radius: 4px;
+}
+
+.th--summary--card--util {
+
+}
+
+.th--payment--card--util {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+
+	h6 {
+
+	}
+
+	span {
+		color: $color-primary;
+		font-weight: 700;
+	}
+}
+
+.th--image--profile {
+
+}
+
+
+/*Badges*/
+.th--badge--green {
+	.th--badge--border {
+		border-left: 7px solid $color-light-green;
+		border-radius: 10px;
+		padding: .8rem 0;
+	}
+
+	.th--badge--bg {
+		color: $color-light-green;
+		font-weight: 700;
+		font-size: $font-size-md;
+		background-color: $color-secondary-alpha;
+		padding: .5rem 1.8rem;
+		border-radius: 3px;
+	}
+}
+
+.th--badge--primary {
+	.th--badge--border {
+		border-left: 7px solid $color-primary;
+		border-radius: 10px;
+		padding: .8rem 0;
+	}
+
+	.th--badge--bg {
+		color: $color-primary;
+		font-weight: 700;
+		font-size: $font-size-md;
+		background-color: $color-primary-alpha;
+		padding: .5rem 1.8rem;
+		border-radius: 3px;
+	}
+}
+
+.th--badge--secondary {
+	.th--badge--border {
+		border-left: 7px solid $color-secondary;
+		border-radius: 10px;
+		padding: .8rem 0;
+	}
+
+	.th--badge--bg {
+		color: $color-secondary;
+		font-weight: 700;
+		font-size: $font-size-md;
+		background-color: $color-secondary-alpha;
+		padding: .5rem 1.8rem;
+		border-radius: 3px;
+	}
+}
+
+.th--badge--orange {
+	.th--badge--border {
+		border-left: 7px solid $color-orange;
+		border-radius: 10px;
+		padding: .8rem 0;
+	}
+
+	.th--badge--bg {
+		color: $color-orange;
+		font-weight: 700;
+		font-size: $font-size-md;
+		background-color: $color-orange-alpha;
+		padding: .5rem 1.8rem;
+		border-radius: 3px;
+	}
+}

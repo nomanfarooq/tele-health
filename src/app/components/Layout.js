@@ -23,11 +23,11 @@ function Layout () {
 	const [{page}] = useAppStore();
 	
 	return (
-		<div className="th--dashboard">
+		<div className="th--page">
 			<div className="th--page--content">
 				<SideMenu/>
-				<Container>
-					<Topbar/>
+				<Container fluid={true}>
+					{/*<Topbar/>*/}
 					<div className="th--content--wrapper">
 						{page === Page.PAGE_DASHBOARD && <Dashboard/>}
 						{page === Page.PAGE_SCHEDULER && <Scheduler/>}

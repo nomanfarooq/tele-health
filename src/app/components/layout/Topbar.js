@@ -15,16 +15,6 @@ const Topbar = ( {theme} ) => {
 						<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 						<Navbar.Collapse id="basic-navbar-nav">
 							<Nav className="ml-auto mr-2 align-items-center">
-								<Nav.Link>
-									<Button disabled type="button" variant="dark" size="md" className="">
-										<div className="d-flex flex-nowrap align-items-center">
-											<span>Icon</span>
-											<div className="ml-2">
-												Add Service
-											</div>
-										</div>
-									</Button>
-								</Nav.Link>
 								<Nav.Link className="th--notify">
 									<span>Icon</span>
 									<span className="badge">2</span>

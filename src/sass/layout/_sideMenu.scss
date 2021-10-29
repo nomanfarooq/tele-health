@@ -1,7 +1,9 @@
 .th--side--menu {
 	z-index: 0;
-	position: absolute;
-	height: 100%;
+	height: auto;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 2px -3px 4px rgba(0, 0, 0, 0.1);
 
 	&.sidebar-dark {
 		background-color: $color-white;
@@ -10,7 +12,7 @@
 	.sidebar {
 		top: 0;
 		bottom: 0;
-		width: 4rem;
+		width: 14rem;
 		z-index: 1040;
 		flex: 0 0 auto;
 		position: static;
@@ -26,6 +28,7 @@
 			overflow: visible;
 			width: auto;
 			top: 3.12503rem;
+			margin-top: 3rem;
 			bottom: 0;
 
 			.nav {
@@ -35,15 +38,20 @@
 					.nav-link {
 						padding: 1rem;
 
-						&.nav-active {
-							background-color: $background-light-1;
-							border-bottom-left-radius: 30px;
-							border-top-left-radius: 30px;
-
-							svg > path {
-								filter: grayscale(1) brightness(0);
+						.th--sidemenu--icon {
+							svg {
+								filter: opacity(0.3);
 							}
 						}
+					}
+
+					.nav-active {
+						.th--sidemenu--icon {
+							svg {
+								filter: opacity(1);
+							}
+						}
+
 					}
 				}
 			}
