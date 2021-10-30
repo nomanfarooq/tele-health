@@ -32,6 +32,7 @@ const MenuIconHztl = () => {
 };
 
 const Patients = () => {
+	const [query, setQuery] = useState('');
 	const [patients, setPatients] = useState([]);
 	const [loading, setLoading] = useState(false);
 	
@@ -50,7 +51,8 @@ const Patients = () => {
 		})();
 	}, []);
 	
-	//console.log(patients, 'here');
+	/** @type {Array<Object>} */
+	const patientsList = patients?.filter(item => (query.trim() ? ((item.name.firstname.toLowerCase().includes(query.toLowerCase())) || (item.name.lastname.toLowerCase().includes(query.toLowerCase()))) : true)) ?? [];
 	
 	if ( loading ) {
 		return (
@@ -146,17 +148,21 @@ const Patients = () => {
 												<ListAltIcon/>
 											</li>
 											<li className="list-inline-item">
-												<Form>
-													<Form.Group className="mb-3" controlId="patientInput">
-														<Form.Control type="text" placeholder="Search Patient"/>
-													</Form.Group>
-												</Form>
+												<Form.Group>
+													<Form.Control placeholder="Search Patient Here" value={query}
+														onChange={e => {
+															e.currentTarget.value = String(e.currentTarget?.value ?? '')
+																.replace(/[^a-z ]/ig, '')
+																.replace(/\s+/g, ' ');
+															setQuery(e.currentTarget.value);
+														}}/>
+												</Form.Group>
 											</li>
 										</ul>
 									</div>
 								</div>
 								<Row>
-									{patients.map(item => (
+									{patientsList.map(item => (
 										<Col md="4" key={item.id}>
 											<Card className="th--card--primary mb-3">
 												<div style={{textAlign: 'right', marginRight: '.5rem'}}>
