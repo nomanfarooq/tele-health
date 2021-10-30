@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 
 //Components
@@ -7,8 +7,8 @@ import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 const Schedule = () => {
-	const localizer = momentLocalizer(moment); // or globalizeLocalizer
-	const myEventsList = [];
+	const [eventsList, setEventList] = useState([]);
+	const local = momentLocalizer(moment);
 	
 	return (
 		<>
@@ -16,8 +16,8 @@ const Schedule = () => {
 				<Card.Body>
 					<h5>Scheduler</h5>
 					<Calendar
-						localizer={localizer}
-						events={myEventsList}
+						localizer={local}
+						events={eventsList}
 						startAccessor="start"
 						endAccessor="end"
 						style={{height: 750}}
