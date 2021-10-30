@@ -1,0 +1,32 @@
+//<editor-fold desc="React Skeleton loader styles">
+@-webkit-keyframes animation-skeleton {
+  0% {
+    background-position: -200px 0
+  }
+  100% {
+    background-position: calc(200px + 100%) 0
+  }
+}
+
+@keyframes animation-skeleton {
+  0% {
+    background-position: -200px 0
+  }
+  100% {
+    background-position: calc(200px + 100%) 0
+  }
+}
+
+.skeleton {
+  background-color: $background-light-5;
+  background-image: linear-gradient(90deg, $background-light-5, $color-white, $background-light-5);
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  display: inline-block;
+  line-height: 1;
+  width: 100%;
+  height: 10px;
+  -webkit-animation: animation-skeleton 1.2s ease-in-out infinite;
+  animation: animation-skeleton 1.2s ease-in-out infinite
+}

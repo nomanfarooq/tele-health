@@ -9,6 +9,7 @@ import * as Page from './../../store/utils/page';
 
 //Components
 import { Image } from 'react-bootstrap';
+import logo from './../../../assets/images/logo-tele-health.png';
 
 const SideMenu = () => {
 	const [{page}, dispatch, {setPage}] = useAppStore();
@@ -17,8 +18,8 @@ const SideMenu = () => {
 		<>
 			<div className="th--side--menu sidebar-dark">
 				<div className="d-md-block sidebar collapse">
-					<div>
-						<Image src="./../../../assets/images/logo-tele-health.png" className="img-fluid"/>
+					<div className="d-flex flex-nowrap justify-content-center mt-4">
+						<Image src={logo} className="img-fluid th--logo" alt="Tele-Health Logo"/>
 					</div>
 					<div className="sidebar-content">
 						<ul className="nav flex-column">

@@ -6,6 +6,7 @@ import DoctorInfo from './../elements/common/DoctorInfo';
 
 //Utils
 import { titleCase } from './../../store/utils/string';
+import Skeleton from './../app/Skeleton';
 
 const ListAltIcon = () => {
 	return (
@@ -59,7 +60,67 @@ const Patients = () => {
 					<Col md="12">
 						<Card>
 							<Card.Body>
-								<span>Loading...</span>
+								<div className="d-flex flex-nowrap align-items-center">
+									<Skeleton height={30} width={150}/>
+									<div className="ms-auto">
+										<Skeleton height={30} width={300}/>
+									</div>
+								</div>
+								<Row className="mt-2">
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+									
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+									
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+									
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+									
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+									
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+									
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+									
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+									
+									<Col md="4">
+										<Card className="border-0 mb-3">
+											<Skeleton height={120}/>
+										</Card>
+									</Col>
+								</Row>
 							</Card.Body>
 						</Card>
 					</Col>
@@ -74,7 +135,7 @@ const Patients = () => {
 				<DoctorInfo/>
 				<Row className="mb-4">
 					<Col md="12">
-						<Card>
+						<Card className="th--card--primary">
 							<Card.Body>
 								<div className="d-flex flex-nowrap align-items-center">
 									<h5>Patients</h5>
