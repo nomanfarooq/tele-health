@@ -14,7 +14,6 @@ const DateCalendar = () => {
 		},
 		[setValue],
 	);
-	console.log(value, 'val');
 	return (
 		<>
 			<Card className="th--card--primary">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card } from 'react-bootstrap';
 
 //Components
@@ -7,7 +7,8 @@ import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 const Schedule = () => {
-	const [eventsList, setEventList] = useState([]);
+	/*const [eventsList, setEventList] = useState([]);*/
+	const eventsList = [];
 	const local = momentLocalizer(moment);
 	
 	return (
