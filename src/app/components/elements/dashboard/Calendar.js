@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Card } from 'react-bootstrap';
 
-const Calendar = () => {
+// Component
+import { Calendar } from '@natscale/react-calendar';
+import '@natscale/react-calendar/dist/main.css';
+
+const DateCalendar = () => {
+	const [value, setValue] = useState(new Date());
+	
+	const onChange = useCallback(
+		( val ) => {
+			setValue(val);
+		},
+		[setValue],
+	);
+	console.log(value, 'val');
 	return (
 		<>
 			<Card className="th--card--primary">
 				<Card.Body>
 					<h5>Calender</h5>
+					<Calendar className="th--calender" value={value} onChange={onChange}/>
 				</Card.Body>
 			</Card>
 		</>
 	);
 };
 
-export default Calendar;
+export default DateCalendar;

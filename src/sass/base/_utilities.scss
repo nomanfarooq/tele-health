@@ -1,13 +1,10 @@
+/*Colors*/
 .color-white {
 	color: $color-white;
 }
 
 .color-black {
 	color: $color-black;
-}
-
-.bg-lightest-primary {
-	background-color: $background-light-0;
 }
 
 .color-primary {
@@ -22,12 +19,26 @@
 	background-color: $color-light-green;
 }
 
+/*Background*/
 .bg-color-primary {
 	background-color: $color-primary;
 }
 
 .bg-color-primary-alpha {
 	background-color: $color-primary-alpha;
+}
+
+.bg-lightest-primary {
+	background-color: $background-light-0;
+}
+
+.bg-light-green {
+	background-color: $color-light-green;
+}
+
+/*Radius*/
+.border-radius-md {
+	border-radius: 10px;
 }
 
 /*Cards*/
@@ -73,10 +84,64 @@
 	}
 }
 
-.th--image--profile {
+.th--appointment--card {
+	margin-top: 1rem;
+	border-radius: 6px;
+	box-shadow: $box-shadow-primary;
 
+	&.th--card--selected {
+		border: 1px solid $color-primary;
+	}
+
+	.row {
+		margin: 0;
+	}
+
+	.th--card--left {
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+		background-color: $color-primary;
+		padding: 1rem;
+		justify-content: center;
+		text-align: center;
+		color: $color-white;
+
+		Img {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.th--card--right {
+		padding: 1rem;
+
+		.th--appointment--card--typo {
+
+			h5 {
+				font-weight: bold;
+			}
+
+			p {
+				margin-bottom: 0;
+				font-weight: 600;
+			}
+
+			span {
+				font-weight: 600;
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
 }
 
+/*Images*/
+.th--image--profile {
+	.th--image {
+		border: 1px solid $color-primary;
+	}
+}
 
 /*Badges*/
 .th--badges-summary {
@@ -151,5 +216,37 @@
 		background-color: $color-orange-alpha;
 		padding: .5rem 2rem;
 		border-radius: 3px;
+	}
+}
+
+/*Icons*/
+.th--icon--bg--rounded {
+	height: 44px;
+	width: 44px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	border-radius: 22px;
+
+	.th--icon--bg {
+		top: 35%;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		display: flex;
+	}
+}
+
+.th--notify--icon {
+	position: relative;
+
+	.th--pill--notify {
+		position: absolute;
+		top: -6px;
+		left: -14px;
+		border-radius: 12px;
+		text-align: center;
+		height: 21px;
+		width: 21px;
+		background-color: $color-white;
+		border: 1px solid $color-primary;
 	}
 }

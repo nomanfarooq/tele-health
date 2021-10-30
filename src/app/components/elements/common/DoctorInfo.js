@@ -27,23 +27,26 @@ const DoctorInfo = () => {
 			<div className="d-flex flex-nowrap align-items-start">
 				<div className="d-flex flex-nowrap align-items-center">
 					<div className="th--image--profile">
-						<Image src="https://picsum.photos/60" roundedCircle/>
+						<Image src="https://picsum.photos/60" roundedCircle className="th--image"/>
 					</div>
 					<div className="ms-2">
 						<a href="#"><h6 className="mb-0">Dr. John Doe</h6></a>
 						<span>Speciality</span>
 					</div>
 				</div>
-				<div className="ms-auto">
-					<Alert className="bg-color-primary-alpha p-1">
+				<div className="ms-5">
+					<Alert className="bg-color-primary-alpha p-1 mb-0 border-0 border-radius-md">
 						<p className="mb-0">Availability: 12:00 AM to 09:00 PM</p>
 						<p className="mb-0">Duration: 15 minutes</p>
 					</Alert>
-					{/*<p className="float-end"><a href="#">Set Availability</a></p>*/}
+					<p className="float-end"><a href="#">Set Availability</a></p>
 				</div>
 				<div className="ms-auto">
 					<div className="d-flex flex-nowrap align-items-center">
-						<BellIcon/>
+						<div className="th--notify--icon">
+							<BellIcon/>
+							<small className="th--pill--notify">2</small>
+						</div>
 						<div className="ms-5">
 							<LogoutIcon/> <small className="color-primary">Log out</small>
 						</div>

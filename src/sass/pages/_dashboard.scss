@@ -1,4 +1,10 @@
 .th--dashboard--page {
 	background-color: $background-light-0;
 	padding: 2rem;
+
+	.th--db--cards--widgets {
+		.card {
+			height: 350px;
+		}
+	}
 }
