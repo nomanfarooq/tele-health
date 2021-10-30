@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col, Card, Form, Image } from 'react-bootstrap';
+
+//Components
 import DoctorInfo from './../elements/common/DoctorInfo';
+
+//Utils
+import { titleCase } from './../../store/utils/string';
 
 const ListAltIcon = () => {
 	return (
@@ -27,13 +32,41 @@ const MenuIconHztl = () => {
 
 const Patients = () => {
 	const [patients, setPatients] = useState([]);
+	const [loading, setLoading] = useState(false);
 	
 	useEffect(() => {
-		fetch('https://fakestoreapi.com/users')
-			.then(res => res.json())
-			.then(json => setPatients(json));
+		(async () => {
+			setLoading(true);
+			try {
+				await fetch('https://fakestoreapi.com/users')
+					.then(res => res.json())
+					.then(json => setPatients(json));
+			} catch ( e ) {
+				console.log(e.message, 'Error');
+			} finally {
+				setLoading(false);
+			}
+		})();
 	}, []);
-	console.log(patients, 'here');
+	
+	//console.log(patients, 'here');
+	
+	if ( loading ) {
+		return (
+			<div className="th--scheduler--page">
+				<DoctorInfo/>
+				<Row className="mb-4">
+					<Col md="12">
+						<Card>
+							<Card.Body>
+								<span>Loading...</span>
+							</Card.Body>
+						</Card>
+					</Col>
+				</Row>
+			</div>
+		);
+	}
 	
 	return (
 		<>
@@ -64,7 +97,7 @@ const Patients = () => {
 								<Row>
 									{patients.map(item => (
 										<Col md="4" key={item.id}>
-											<Card className="th--card--primary">
+											<Card className="th--card--primary mb-3">
 												<div style={{textAlign: 'right', marginRight: '.5rem'}}>
 													<a href="#"><MenuIconHztl/></a>
 												</div>
@@ -74,20 +107,20 @@ const Patients = () => {
 															<Image src="https://picsum.photos/72" roundedCircle/>
 														</div>
 														<div className="ms-3">
-															<h6>Patient name</h6>
+															<h6>{titleCase(item.name.firstname) + ' ' + titleCase(item.name.lastname)}</h6>
 															<div className="d-flex flex-nowrap align-items-center">
 																<p className="mb-0">Gender: <span>Male</span></p>
 																<div className="ms-2">
 																	<p className="mb-0">Age: <span>45 yrs</span></p>
 																</div>
 															</div>
-															<p className="text-muted">Appointment: 4</p>
+															<p className="text-muted">Appointment: {item.id}</p>
 														</div>
 													</div>
 												</Card.Body>
 											</Card>
 										</Col>
-										))}
+									))}
 								</Row>
 							</Card.Body>
 						</Card>

@@ -13,7 +13,7 @@ const Payments = ( {title, amount} ) => {
 const Earnings = () => {
 	return (
 		<>
-			<Card className="th--card--primary">
+			<Card className="th--card--primary th--earning--card">
 				<Card.Body>
 					<h5>Earnings</h5>
 					<Payments title="Total Received Payments" amount="$ 12,312"/>
