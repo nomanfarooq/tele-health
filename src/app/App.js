@@ -25,7 +25,9 @@ const App = () => {
 				dispatch({type: APP_ERROR, payload: e.message});
 			} finally {
 				dispatch({type: APP_LOADING, payload: false});
-				dispatch({type: APP_INIT, payload: true});
+				setTimeout(() => {
+					dispatch({type: APP_INIT, payload: true});
+				},1500);
 			}
 		})();
 	}, []);
